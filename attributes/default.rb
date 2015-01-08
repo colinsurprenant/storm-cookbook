@@ -1,5 +1,6 @@
 default[:storm][:deploy][:user] = ::File.exists?("/home/vagrant") ? "vagrant" : "ubuntu"
 default[:storm][:deploy][:group] = ::File.exists?("/home/vagrant") ? "vagrant" : "ubuntu"
+default[:storm][:deploy][:start_processes] = false
 
 default[:storm][:nimbus][:host] = "192.168.42.10"
 default[:storm][:supervisor][:hosts] = [ "192.168.42.20" ]

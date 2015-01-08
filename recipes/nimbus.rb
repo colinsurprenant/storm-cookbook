@@ -17,4 +17,5 @@ bash "Start nimbus" do
     nohup apache-storm-#{node[:storm][:version]}/bin/storm nimbus >>nimbus.log 2>&1 &
   fi
   EOH
+  only_if { node[:storm][:deploy][:start_processes] }
 end
